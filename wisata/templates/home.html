@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{%  block content %}
+<form action="" class="search">
+      <input type="text" name="nama" class="form-control" placeholder="Cari Wisata"/>
+    <button type="submit">Search</button>
+  </form>
+  {% if searchNama %}
+  Pencarian untuk <strong>{{searchNama}}</strong>
+  {% endif %}
+  <br/>
+{% for wisata in wisatas %}
+<div class="wisata">
+    <img src="{{ wisata.gambar.url }}" alt="wisata"/>
+    <div class="text">
+    <h3>{{ wisata.nama }}</h3>
+    <p>{{ wisata.lokasi }}</p>
+    <a href="{% url 'detail' wisata.id %}">Detail</a>
+    </div>
+</div>
+
+{% endfor %}
+</div>
+{% endblock content %}

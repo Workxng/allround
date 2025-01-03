@@ -1,0 +1,152 @@
+
+html {
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    background-color: #8cc0ff;
+    padding: 10px;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.103);
+}
+    
+.navbar a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    padding-top: 8px;
+}
+.navbar a:hover {
+    color: #3745be;
+    font-size: 18px;
+}
+
+/* tampilan utama */
+.container {
+    padding: 20px;
+}
+
+/* search bar */
+.search {
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px;
+    background-color: #5680b2;
+    font-size: 16px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+    color: #fff;
+}
+
+.search button {
+    background-color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search input {
+    background-color:  #6198db;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    width: 1355px;
+}
+/* tampilan wisata */
+.wisata {
+    display: flex;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f2f2f2;
+    transition: all 0.3s ease-in-out;
+}
+
+.wisata:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wisata img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.wisata .text {
+    padding: 10px;
+}
+
+.wisata a {
+    font-weight: bold;
+    color: #000000;
+}
+
+.wisata a:hover {
+    opacity: 0.6;
+}
+/* review */
+.review {
+    padding: 10px;
+}
+.review form {
+    width: 625px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 610px;
+}
+
+.review textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 610px;
+}
+
+.review input[type="range"] {
+    width: 625px;
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+.review button {
+    background-color: #b7c0cc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.review button:hover {
+    opacity: 0.6;
+    scale: 1.02;
+}
+.card {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    padding: 10px;
+    border-radius: 8px;
+}
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+    <div>
+        <div> <!-- Mengatur lebar konten menjadi 30% -->
+            <!-- Detail Buku -->
+            <div class="wisata">
+                <img src="{{ wisata.gambar.url }}" alt="wisata"/>
+                <div class="text">
+                <h3>{{ wisata.nama }}</h3>
+                <p>{{ wisata.lokasi }}</p>
+                <p>{{ wisata.deskripsi }}</p>
+                </div>
+            </div>
+                        
+            <!-- Form Review -->
+            <div class="review">
+                <h4>Tambahkan Review</h4>
+                <form method="post">
+                    {% csrf_token %}
+                    <div>
+                        <label for="id_nama" class="form-label">Nama Anda</label><br/>
+                        <input type="text" name="nama" id="id_nama" class="form-control" required>
+                    </div>
+                    <div>
+                        <label for="id_review" class="form-label">Komentar</label><br/>
+                        <textarea name="review" id="id_review" class="form-control"></textarea>
+                    </div>
+                    <div>
+                        <label for="id_rating" class="form-label">Rating</label>
+                        <div>
+                            <input type="range" name="rating" id="id_rating" class="form-range" min="1" 
+                            max="5" value="3" oninput="this.nextElementSibling.value = this.value">
+                            <output>3</output>
+                        </div>
+                    </div>
+                    <button type="submit">Kirim Review</button>
+                </form>
+            </div>
+
+                        <!-- Reviews -->
+                        <div>
+                          <h4>Reviews</h4>
+                          {% for review in reviews %}
+                              <div class="card">
+                                  <div >
+                                      <h4>{{ review.nama }}</h4>
+                                      <p>
+                                          Rating: {{review.rating}}
+                                      </p>
+                                  </div>
+                              </div>
+                          {% empty %}
+                              <p>Belum ada review untuk wisata ini.</p>
+                          {% endfor %}
+                      </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
